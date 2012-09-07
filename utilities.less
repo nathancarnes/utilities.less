@@ -1,0 +1,92 @@
+/* utilities.less */
+/* http://github.com/nathancarnes/utilities.less */
+/* version v0.1 */
+
+// Resets //////////////////////////////////////////////////////////////////////
+.reset(){
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list(){
+  .reset();
+  list-style-type: none;
+
+  li, ol, ul{
+    .reset();
+
+    list-style-type: none;
+  }
+}
+
+// Floats //////////////////////////////////////////////////////////////////////
+.flow-start{ float: left; }
+.flow-end{ float: right; }
+
+[dir=rtl]{
+  .flow-start{ float: right; }
+  .flow-end{ float: left; }
+}
+
+.clear{ clear: both; }
+
+.clearfix(){
+  &:before, &:after{
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+// Miscellaneous ///////////////////////////////////////////////////////////////
+.hide{ display: none; }
+
+.canvas(@z-index: 1000){
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: @z-index;
+}
+
+.ir(@image, @width, @height){
+  background: 0 0 no-repeat ~'url("@{image}")';
+  display: block;
+  height: @height;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  width: @width;
+}
+
+// Pure CSS Arrows /////////////////////////////////////////////////////////////
+.arrow(@color, @width){
+  border: transparent solid @width;
+  content: ' ';
+  display: block;
+  font-size: 1px;
+  height: 0;
+  width: 0;
+}
+
+.arrow-up(@color, @width){
+  .arrow(@color, @width);
+  border-bottom-color: @color;
+}
+
+.arrow-down(@color, @width){
+  .arrow(@color, @width);
+  border-top-color: @color;
+}
+
+.arrow-left(@color, @width){
+  .arrow(@color, @width);
+  border-right-color: @color;
+}
+
+.arrow-right(@color, @width){
+  .arrow(@color, @width);
+  border-left-color: @color;
+}
