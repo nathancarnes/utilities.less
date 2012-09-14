@@ -61,6 +61,11 @@
   width: @width;
 }
 
+.text-height(@height){
+  height: @height;
+  line-height: @height;
+}
+
 // Pure CSS Arrows /////////////////////////////////////////////////////////////
 .arrow(@color, @width){
   border: transparent solid @width;
@@ -89,4 +94,39 @@
 .arrow-right(@color, @width){
   .arrow(@color, @width);
   border-left-color: @color;
+}
+
+// Suckerfish Menus ////////////////////////////////////////////////////////////
+.suckerfish(@row_height: 30px, @dropdown_width: 8em){
+  position: relative;
+  .clearfix();
+  .reset-list();
+
+  li{
+    float: left;
+
+    a{
+      display: block;
+      .text-height(@row_height);
+    }
+
+    ul{
+      display: none;
+      position: absolute;
+      top: @row_height;
+      width: @dropdown_width;
+
+      li{
+        float: none;
+
+        ul{
+          display: none;
+          left: @dropdown_width;
+          top: 0;
+        }
+      }
+    }
+
+    &:hover > ul{ display: block; }
+  }
 }

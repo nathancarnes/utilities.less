@@ -19,77 +19,214 @@
   </script>
 </head>
 <body>
-  <div id="header">
+  <header>
     <h1>utilities.less</h1>
-  </div>
+  </header>
 
-  <h2>Resets</h2>
+  <section id="resets">
+    <h2>Resets</h2>
 
-  <code>.reset();</code>
-  <p>I'm a paragraph that's been reset!</p>
+    <code>.reset();</code>
+    <p>I'm a paragraph that's been reset!</p>
 
-  <code>.reset-list();</code>
-  <ol>
-    <li>Lorem ipsum
-      <ul>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-      </ul>
-    </li>
-    <li>Lorem ipsum
-      <ul>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-      </ul>
-    </li>
-  </ol>
+    <code>.reset-list();</code>
+    <ol>
+      <li>Lorem ipsum
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </li>
+      <li>Lorem ipsum
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
 
-  <h2>Floats</h2>
+  <section id="floats">
+    <h2>Floats</h2>
 
-  <code>.flow-start, .flow-end, .clear</code>
-  <div class="flow-start">I should be the first thing you read, at the start of the flow</div>
-  <div class="flow-end">I should be on the last thing you read, at the end of the flow</div>
-  <div class="clear">I'm clearing everything</div>
-
-  <code>.flow-start, .flow-end, .clear &mdash; with [dir=rtl]</code>
-  <div dir="rtl">
+    <code>.flow-start, .flow-end, .clear</code>
     <div class="flow-start">I should be the first thing you read, at the start of the flow</div>
     <div class="flow-end">I should be on the last thing you read, at the end of the flow</div>
     <div class="clear">I'm clearing everything</div>
-  </div>
 
-  <code>.clearfix();</code>
-  <div id="clearfix-example">
-    <div class="flow-start">Lorem Ipsum</div>
-    <div class="flow-end">Lorem Ipsum</div>
-  </div>
+    <code>.flow-start, .flow-end, .clear &mdash; with [dir=rtl]</code>
+    <div dir="rtl">
+      <div class="flow-start">I should be the first thing you read, at the start of the flow</div>
+      <div class="flow-end">I should be on the last thing you read, at the end of the flow</div>
+      <div class="clear">I'm clearing everything</div>
+    </div>
 
-  <h2>Miscellaneous</h2>
+    <code>.clearfix();</code>
+    <div id="clearfix-example">
+      <div class="flow-start">Lorem Ipsum</div>
+      <div class="flow-end">Lorem Ipsum</div>
+    </div>
+  </section>
 
-  <code>.hidden</code>
-  <div class="hide">I'm hiding, like a ninja</div>
+  <section id="miscellaneous">
+    <h2>Miscellaneous</h2>
 
-  <code>.canvas(@z-index: 1000)</code>
-  <a href="#/" id="canvas-trigger">Click here for a demonstration</a>
-  <div id="canvas-example" class="hide">Click anywhere to hide me</div>
+    <code>.hidden</code>
+    <div class="hide">I'm hiding, like a ninja</div>
 
-  <code>.ir(@image, @width, @height)</code>
-  <div id="ir-example">I've been replaced by an image</div>
+    <code>.text-height(@height)</code>
+    <div id="text-height-example">A convience method for setting <kbd>height</kbd> and <kbd>line-height</kbd> to equal values</div>
 
-  <h2>Arrows</h2>
+    <code>.canvas(@z-index: 1000)</code>
+    <a href="#/" id="canvas-trigger">Click here for a demonstration</a>
+    <div id="canvas-example" class="hide">Click anywhere to hide me</div>
 
-  <code>.arrow-up(@color, @width);</code>
-  <div id="arrow-up-demo">Aye aye, captain</div>
+    <code>.ir(@image, @width, @height)</code>
+    <div id="ir-example">I've been replaced by an image</div>
+  </section>
 
-  <code>.arrow-down(@color, @width);</code>
-  <div id="arrow-down-demo">Aye aye, captain</div>
+  <section id="arrows">
+    <h2>Arrows</h2>
 
-  <code>.arrow-left(@color, @width);</code>
-  <div id="arrow-left-demo">Aye aye, captain</div>
+    <code>.arrow-up(@color, @width);</code>
+    <div id="arrow-up-demo">Aye aye, captain</div>
 
-  <code>.arrow-right(@color, @width);</code>
-  <div id="arrow-right-demo">Aye aye, captain</div>
+    <code>.arrow-down(@color, @width);</code>
+    <div id="arrow-down-demo">Aye aye, captain</div>
+
+    <code>.arrow-left(@color, @width);</code>
+    <div id="arrow-left-demo">Aye aye, captain</div>
+
+    <code>.arrow-right(@color, @width);</code>
+    <div id="arrow-right-demo">Aye aye, captain</div>
+  </section>
+
+  <section id="suckerfish-menus">
+    <h2>Suckerfish Menus</h2>
+    <code>
+      .suckerfish(@row_height: 30px, @dropdown_width: 8em);
+    </code>
+    <ul id="suckerfish-example">
+      <li>
+        <a href="#">Link</a>
+        <ul>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link a</a></li>
+              <li><a href="#">Link b </a></li>
+              <li><a href="#">Link c</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link d</a></li>
+              <li><a href="#">Link f</a></li>
+              <li><a href="#">Link g</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link h</a></li>
+              <li><a href="#">Link i</a></li>
+              <li><a href="#">Link j</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Link</a>
+        <ul>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link l</a></li>
+              <li><a href="#">Link m</a></li>
+              <li><a href="#">Link n</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link o</a></li>
+              <li><a href="#">Link p</a></li>
+              <li><a href="#">Link q</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link r</a></li>
+              <li><a href="#">Link s</a></li>
+              <li><a href="#">Link t</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Link</a>
+        <ul>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link u</a></li>
+              <li><a href="#">Link v</a></li>
+              <li><a href="#">Link w</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link x</a></li>
+              <li><a href="#">Link y</a></li>
+              <li><a href="#">Link z</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Link</a>
+        <ul>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link 4</a></li>
+              <li><a href="#">Link 5</a></li>
+              <li><a href="#">Link 6</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link 7</a></li>
+              <li><a href="#">Link 8</a></li>
+              <li><a href="#">Link 9</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Link</a>
+            <ul>
+              <li><a href="#">Link 10</a></li>
+              <li><a href="#">Link 11</a></li>
+              <li><a href="#">Link 12</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
 </body>
 </html>
