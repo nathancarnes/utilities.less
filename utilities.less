@@ -147,3 +147,19 @@
     box-flex : 1;
   }
 }
+
+// Gradients ///////////////////////////////////////////////////////////////////
+// Adapted from LESS Elements: https://github.com/dmitryf/elements/
+.gradient(@top: #eee, @bottom: #aaa){
+  background: mix(@top, @bottom, 50);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @bottom), color-stop(1, @top));
+  background: -moz-linear-gradient(center bottom, @bottom 0%, @top 100%);
+}
+
+.gradient-from-color(@color: #ccc, @range: 25%){
+  .gradient(lighten(@color, @range), darken(@color, @range));
+}
+
+.gradient-from-color-reverse(@color: #ccc, @range: 25%){
+  .gradient(darken(@color, @range), lighten(@color, @range));
+}
