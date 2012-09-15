@@ -115,6 +115,7 @@
       position: absolute;
       top: @row_height;
       width: @dropdown_width;
+      z-index: 2;
 
       li{
         float: none;
@@ -128,5 +129,21 @@
     }
 
     &:hover > ul{ display: block; }
+  }
+}
+
+// Equal-height columns ////////////////////////////////////////////////////////
+.equal-height-columns(){
+  display: -moz-box;
+  display: -moz-box;
+  display: box;
+  -moz-box-orient : horizontal;
+  -webkit-box-orient : horizontal;
+  box-orient : horizontal;
+
+  & > *{
+    -moz-box-flex : 1;
+    -webkit-box-flex : 1;
+    box-flex : 1;
   }
 }
